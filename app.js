@@ -21,8 +21,9 @@ app.get('/api/all', (req, res) => {
 
 app.get('/restaurant', (req, res) => {
     res.sendFile(public + '/restaurant.html');
-    console.log(event.target)
 });
+
+
 
 
 

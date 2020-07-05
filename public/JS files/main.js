@@ -1,5 +1,6 @@
 let myMap = L.map("map").setView([44.4759, -73.2121], 13);
 let latLngArray = [];
+let restList = document.getElementById('restList')
 
 L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
   maxZoom: 17,
@@ -18,7 +19,10 @@ async function getJson() {
         console.log(jsonObjs);
         for (let object of jsonObjs) {
             let id = object.id;
+            
           placeMarker(id);
+          let listItem = `<a href="/restaurant#${id}" id="${id}">${object.name}</a>`
+          restList.innerHTML += listItem;
         }
       });
   }
@@ -37,13 +41,20 @@ async function placeMarker(id) {
 
     fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${urlAddress}`)
     .then((res) => res.json())
-    .then(json => {
-        console.log(json[0]);
-        let coordinates = json.coords;
+    .then(data => {
+        let coordinates = data.coords;
         let latLngArr = [coordinates[0], coordinates[1]];
 
-        L.marker(latLngArr).addTo(myMap)
+        let marker = L.marker(latLngArr).addTo(myMap);
+        marker.id = urlAddress;
+        marker.addEventListener('click', openRestaurant);
+
     })
+}
+
+function openRestaurant(){
+  console.log(event.target.id)
+  // window.location = `https://localhost:8080/restaurant#${event.target.id}`
 }
 
     //     newMarker.addEventListener("click", () => {

@@ -1,0 +1,7 @@
+{
+    "id": "the-skinny-pancake",
+    "name": "The Skinny Pancake",
+    "address": "60 Lake St Ste 1A, Burlington Vermont 05401",
+    "coords": "[44.4769319,-73.2200307]",
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/the-skinny-pancake"
+  }

@@ -1,0 +1,7 @@
+{
+    "id": "the-friendly-toast",
+    "name": "The Friendly Toast",
+    "address": "86 St. Paul St., Burlington Vermont 05401",
+    "coords": "[44.4773683, -73.2160932]",
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/the-friendly-toast"
+  }

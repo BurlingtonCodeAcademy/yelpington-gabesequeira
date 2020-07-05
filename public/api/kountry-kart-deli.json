@@ -1,0 +1,12 @@
+{
+    "id": "kountry-kart-deli",
+    "name": "Kountry Kart Deli",
+    "address": "155 Main St. Burlington, VT 05401",
+    "phone": "864-4408",
+    "website": "http://www.kountrykartdeli.com",
+    "coords": "[44.4756979, -73.2151394]",
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/kountry-kart-deli",
+    "notes": [
+      "Home of the world famous Shiner!"
+    ]
+  }

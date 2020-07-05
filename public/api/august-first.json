@@ -1,0 +1,14 @@
+{
+    "id": "august-first",
+    "name": "August First",
+    "address": "149 S Champlain St. Burlington, VT 05401",
+    "phone": "540-0060",
+    "website": "http://augustfirstvt.com/",
+    "coords": "[44.4754408, -73.2195054]",
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/august-first",
+    "notes": [
+      "Homemade and from scratch breakfast and lunch made with natural ingredients!",
+      "Fantastic baked goods!",
+      "Catering, and Private Parties available!"
+    ]
+  }

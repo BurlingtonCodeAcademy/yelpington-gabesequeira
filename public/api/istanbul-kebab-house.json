@@ -1,7 +1,0 @@
-{
-    "id": "istanbul-kebab-house",
-    "name": "Istanbul Kebab House",
-    "address": "175 Church St. Burlington, VT 05401",
-    "coords": "[44.4754259, -73.2142202]",
-    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/istanbul-kebab-house"
-  }

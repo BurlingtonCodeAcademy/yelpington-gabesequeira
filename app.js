@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-let fetch = require('isomorphic-unfetch');
 const { response } = require('express');
 const public = path.resolve('./public');
 const port = process.env.PORT || 8080

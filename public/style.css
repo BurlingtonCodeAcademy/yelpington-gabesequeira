@@ -7,6 +7,22 @@ p{
     margin-left: 170px;
 }
 
+.orange-btn{
+margin-right: -10px;
+margin-top: 3px;
+font-size: 50px;
+}
+
+.icon{
+    font-size: 'w3-tiny';
+}
+
+#orange-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
 .header {
     padding: 50px;
     text-align: center;

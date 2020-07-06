@@ -8,17 +8,33 @@ let phone = document.getElementById('phone')
 let price = document.getElementById('price')
 let website = document.getElementById('website')
 let notes = document.getElementById('notes')
+let latLngArr = []
+
+
 
 fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`)
 .then((res) => res.json())
-.then((dataObj) => {
-    console.log(dataObj)
-    name.innerText = `${dataObj.name}`;
-    address.innerText = `Address: ${dataObj.address}`;
-    category.innerText = `Category: ${dataObj.category}`;
-    hours.innerText = `Hours: ${dataObj.hours}`;
-    phone.innerText = `Phone: ${dataObj.phone}`;
-    price.innerText = `Price: ${dataObj.price}`;
-    website.innerText = `Website: ${dataObj.website}`;
-    notes.innerHTML = `Notes: ${dataObj.notes}`;
+.then((object) => {
+    name.innerText = `${object.name}`;
+    address.innerText = `Address: ${object.address}`;
+    category.innerText = `Category: ${object.category}`;
+    hours.innerText = `Hours: ${object.hours}`;
+    phone.innerText = `Phone: ${object.phone}`;
+    price.innerText = `Price: ${object.price}`;
+    website.innerText = `Website: ${object.website}`;
+    notes.innerText = `Notes: `;
+    object.notes.forEach((element) => {
+        let note = document.createElement("li");
+        note.innerText = element;
+        notes.appendChild(note)
+    })
+    let coordinates = object.coords;
+    latLngArr = [coordinates[0], coordinates[1]];
+    console.log(latLngArr)
 }) 
+let myMap = L.map("map").setView(Array.from(latLngArr), 13);
+L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+  maxZoom: 17,
+  attribution:
+    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+}).addTo(myMap);

@@ -1,4 +1,4 @@
-let myMap = L.map("map").setView([44.4759, -73.2121], 13);
+let myMap = L.map("map").setView([44.4779646, -73.2167659], 14);
 let restList = document.getElementById('restList')
 
 L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
@@ -25,6 +25,9 @@ async function getJsonAndPlaceMarkers() {
             let marker = L.marker(latLngArr).addTo(myMap);
             marker.id = id;
             marker.bindPopup(`<b>${object.name}</b>`).openPopup();
+            marker.addEventListener('dblclick', (e) => {
+              window.location = `/restaurant#${id}`
+            })
             
           let listItem = `<a href="/restaurant#${id}" id="${id}">${object.name}</a>`
           restList.innerHTML += listItem;

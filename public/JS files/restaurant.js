@@ -21,7 +21,7 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`)
     hours.innerText = `Hours: ${object.hours}`;
     phone.innerText = `Phone: ${object.phone}`;
     price.innerText = `Price: ${object.price}`;
-    website.innerText = `Website: ${object.website}`;
+    website.innerHTML = `Website: <a>${object.website}</a>`;
     notes.innerText = `Notes: `;
     object.notes.forEach((element) => {
         let note = document.createElement("li");
@@ -31,6 +31,8 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`)
     let coordinates = object.coords;
     latLngArr = [coordinates[0], coordinates[1]];
     console.log(latLngArr)
+
+
 }) 
 let myMap = L.map("map").setView(Array.from(latLngArr), 13);
 L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {

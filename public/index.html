@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="imgs/favicon.ico" />
+  </head>
+  <body>
+    <!-- Main Header -->
+    <div class="header">
+      <h1>Yelp... ington!</h1>
+    </div>
+    <!-- Side Navigation -->
+    <div class="sidenav" id="sidenav">
+      <div id="restList">
+        <h1 id="listTitle">Restaurant List</h1>
+      </div>
+    </div>
+    <div class="main">
+      <!-- Main Content -->
+      <div id="name"></div>
 
-  <script src="main.js"></script>
-</body>
+      <div id="map"></div>
+    </div>
+    <p>
+      Click any link in the sidebar for more information.<br />
+      Click any marker to display the name of the restaurant,<br />
+      Double-click it for more information.<br />
+    </p>
+    <!-- <section id="footer">
+      <div id="footer-content">
+        <div id="questions">
+          <h3>Questions or comments? Get in touch:</h3>
+        </div>
+        <div id="footer-lower">
+          <div id="footer-form-container" style="margin-left: 4em;">
+            <form>
+              <div id="name-email" class="form-inputs">
+                <input id="name" class="name-email-input" type="text" placeholder=name />
+                <input id="email" class="name-email-input" type="text" placeholder=email />
+              </div>
+              <textarea class="message-input" placeholder=message style="height: 80px;"></textarea>
+              <div id="orange-btn-wrapper" style="display: flex;
+            justify-content: flex-start;">
+                <a href="index.html">
+                  <button id="send-msg" type="button" style="font-size: 10px;" class="orange-btn"><img class="icon" src="imgs/button-img.png" style="margin-right: -10px; margin-top: 3px;"/>Send Message</button>
+                </a>
+              </div>
+            </form>
+          </div>
+          <div id="footer-contact-info">
+            <div id='text'>
+              <p style="font-size: 7px;margin-left: 10px; margin-top: -.2px; margin-bottom: -3px">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptatibus eum omnis vero ad porro est
+                soluta? Blanditiis, veniam enim! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div id="contact-links" style="display: flex;">
+              <div id="left-contacts">
+                <div class="contact" style="margin-top: 15px;">
+                  <div class="contact-img-wrapper">
+                    <img class='icon' src="imgs/footerlink-home.png" />
+                  </div>
+                  <p style="display: grid;" class="small-font">1234 Somewhere Road,<br>Burlington, VT 00000<br>USA</p>
+                </div>
+                <div class="contact">
+                  <div class="contact-img-wrapper" style="margin-top: 20px">
+                    <img src="imgs/footerlink-phone.png" class="icon" />
+                  </div>
+                  <p class="small-font" style="margin-bottom: 20px; position: relative; top: -10px">(000)000-0000</p>
+                </div>
+                <div class="contact" style="display: flex;">
+                  <div class="contact-img-wrapper" style="position: relative; top: -10px;">
+                    <img src="imgs/footerlink-email.png" class='icon' style="size: 5px" />
+                  </div>
+                  <p class="small-font" style="position: relative; top: -20px;">info@untitled.tld</p>
+                </div>
+              </div>
+              <div id="right-contacts" style="position: relative; bottom: -10px;">
+                <div class="contact">
+                  <div class="contact-img-wrapper">
+                    <img class="icon" src="imgs/footerlink-twitter.png"/>
+                  </div>
+                  <p style="display: grid; position: relative; top: -2px;" class="small-font">@untitled</p>
+                </div>
+                <div class="contact">
+                  <div class="contact-img-wrapper">
+                    <img class="icon" src="imgs/footerlink-instagram.png"/>
+                  </div>
+                  <p class="small-font" style="display: grid; position: relative; bottom: -2px;">instagram.com</p>
+                </div>
+                <div class="contact">
+                  <div class="contact-img-wrapper">
+                    <img class="icon" src="imgs/footerlink-dribbble.png"/>
+                  </div>
+                  <p class="small-font" style="display: grid; position: relative; bottom: -3px;">dribbble.com</p>
+                </div>
+                <div class="contact">
+                  <div class="contact-img-wrapper">
+                    <img class="icon" src="imgs/footerlink-facebook.png"/>
+                  </div>
+                  <p class="small-font" style="display: grid; position: relative; bottom: -5px;">facebook.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <script src="JS files/main.js"></script>
+  </body>
 </html>
